@@ -7,7 +7,7 @@ class Blog(models.Model):
     slug = models.SlugField(max_length=140, unique=True)
     body = models.TextField()
 
-    posted = models.DateTimeField(db_index=True, auto_now_add=True, verbose_name=_('postDate'))
+    posted = models.DateTimeField(auto_now_add=True, verbose_name=_('postDate'))
     modified = models.DateTimeField(null=True, verbose_name=_('modified'))
     category = models.ForeignKey('blog.Category', on_delete=models.CASCADE)
 
