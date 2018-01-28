@@ -1,0 +1,11 @@
+{% extends 'blog/baseBlog.html' %}
+{% load staticfiles %}
+{% block content %}
+    <dir class='container'>
+        <ul class='list-group'>
+            {% for b in blog_list %}
+                <li class='list-group-item'>{{ b }}</li>
+            {% endfor %}
+        </ul>
+    </dir>
+{% endblock content %}
