@@ -16,9 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from main import views
 from blog import views
+from visual import views
+from audio import views
 
 urlpatterns = [
+    path('', include('main.urls')),
     path('blog/', include('blog.urls')),
+    path('visual/', include('visual.urls')),
+    path('audio/', include('audio.urls')),
     path('admin/', admin.site.urls),
 ]

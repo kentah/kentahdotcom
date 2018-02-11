@@ -9,9 +9,24 @@
         {% endblock stylesheets %}    
     </head>
     <body>
+         <div class="container">
+            <nav class="navbar navbar-toggleable-md navbar navbar-inverse bg-inverse">
+                <a class="navbar-brand" href='/'>We Build Prisons</a>
+                    <ul class='navbar-nav'>
+                        <li class='nav-item'>
+                            <a class='nav-link' href='{% url 'blog' %}'>blog</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link' href='{% url 'visual' %}'>img</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link' href='{% url 'audio' %}'>audio</a>
+                        </li>
+                    </ul>
+            </nav>
+        </div>
         <div class='content'>
             {% block content %}
-                <h1>From base.html</h1>
             {% endblock content %}
         </div>
     </body>
